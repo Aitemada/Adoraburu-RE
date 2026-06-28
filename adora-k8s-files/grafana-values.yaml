@@ -1,0 +1,46 @@
+adminPassword: "adomin" 
+persistence:
+  enabled: true
+  size: 1Gi
+resources:
+  limits:
+    memory: 1Gi
+  requests:
+    memory: 512Mi
+
+livenessProbe:
+  httpGet:
+    path: /health
+    port: 3000
+  initialDelaySeconds: 18
+  periodSeconds: 10
+  failureThreshold: 3
+
+initChownData:
+  enabled: false
+  
+extraInitContainers:
+
+  - name: wait-for-loki
+    image: busybox:latest
+    # Pings Loki every 3 seconds until it gets a successful response
+    command: ['sh', '-c', 'until wget -qO- http://loki:3100/ready; do echo "waiting for loki"; sleep 3; done']
+    
+  - name: wait-for-prometheus
+    image: busybox:latest
+    # Pings Prometheus every 3 seconds until it gets a successful response
+    command: ['sh', '-c', 'until wget -qO- http://prometheus-server:80/-/ready; do echo "waiting for prom"; sleep 3; done']  
+    
+datasources:
+  datasources.yaml:
+    apiVersion: 1
+    datasources:
+    - name: Prometheus
+      type: prometheus
+      url: http://prometheus-server
+      access: proxy
+      isDefault: true
+    - name: Loki
+      type: loki
+      url: http://loki:3100
+      access: proxy

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Fan page for the creations of Ado, japanese singer">
+    <meta name="keywords" content="ado, ado singer, アド, ado show, ado usseewa, usseewa, show唱, 唱, Ado-san, Ado, Ado lyrics, ado unravel, Ado unravel, unravel Ado">
+    <meta name="author" content="Aitemu(Aitemada)">
+    <link rel="stylesheet" href="show.css"> <link rel="icon" type="image/x-icon" href="../../Images/speakerLogo1.png">
+    <title>AdoRaburu</title>
+    <script src="show.js" defer></script><script src="jquery-3.7.1.slim.min.js" defer></script>
+</head>
+<body>
+   
+    <div id="mainNavig">
+    <header>
+        <img src="../../Images/speakerLogo0.png" alt="CoolMegaphoneLogo">
+        <div id="containHeads">
+        <h1 id="mainHead">AdoRaburu</h1>
+        <h2>One place for adorable Ado-san's works.</h2>
+        </div>
+    </header>
+    <nav>
+        <button onclick="reHome()">Home</button>
+        <button onclick="sngList()">Songlist</button> 
+        <button onclick="showSponsors()">Sponsors</button> 
+        <button onclick="randSong()">Random Song</button> 
+        <button onclick="AdoYT()">Ado's Youtube</button> 
+        <button onclick="donate()">Donate</button> 
+    </nav>
+    </div>
+    <div id="siteStruct">
+        <h3>Show 「唱」</h3>
+        <div id="mainCont">
+        <pre id="lyrics">
+[Intro]
+Na-na, na-na-na
+Ready for my show
+Okay, tachimachi dokudanjou
+Listen, listen
+Na-na, na-na-na
+Ready for my show
+Kabuke
+Furikirou (Giga) (TeddyLoid)
+
+[Verse 1]
+Ha! Ya-ya-ya-ya-ya shou taimu
+Teppen no onari hora oide
+Yoi wo konpuriito oorai hell yeah, yeah, yeah, yeah
+Dandan norinori de chou kantan brah, brah, brah! Pow
+Emo iwarenai ain't nobody stop (Ha, ha)
+
+[Verse 2]
+Oh, zendo kenran gouka
+Attention sawagouka
+Ishi hyouji ni mou jiki shougeki no koe takaraka doudou touban
+Mou garandou wa tokku no tou touta
+Ay, ryouran ouka odemashi da, ah
+
+[Pre-Chorus]
+Kakkou tsuketeru tsumori wa no, no
+Ootomatikku ni afurechau honnou
+Notamau dantoudai no ue de hashage karei
+Da-rat-a-tat-a, warning!
+
+[Chorus]
+Na-na, na-na-na
+Ready for my show
+Banzai asobuge ni kotobuki
+Shout it out, shout it out
+Na-na, na-na-na
+Ready for my show
+Hannari kanjou doori ni hassou tobi
+Shout it out, shout it out (Ooh)
+
+[Post-Chorus]
+(Hey, uh) Kuracchai na
+(Hey, ha) Rat-tat-tat-tat-tat (Pull up)
+(Hey uh, wa-wa-wa)
+Mankai souin ikki ni tobikiri jump around
+
+[Verse 3]
+Look at me now
+Hifu wo yaburisou na hodo ni haneru shinzou
+Kurai gekijouteki shiyou (Exotic vox)
+Ini mini mani mo goraijou kara no goraikou
+Kakurenbo shiteru sono kimochi kaihou
+(Risei adiosu)
+Shakariki jimichau (Ay, ay, ay, ay)
+
+[Verse 4]
+Jabarabadabi kataru nimaiba
+Yashinka shitto suru you na juusu
+Taburakasu nakatto naccha iya
+Karuma ni itaru mae ni tayutau wa
+Jabarabadabi kataru nimaiba
+Yashinka shitto suru you na juusu
+Taburakasu nakatto naccha iya
+Toiro no batafurai (No escape)
+
+
+[Bridge]
+Gozonji no doori souzoushii kodou ni
+Hodasarete mou tomarenai
+Shoudou ni tosou shi egaita daybreak
+Hai kantsuu teionkyou
+
+[Pre-Chorus]
+Na-na, na-na-na
+Ready for my show
+Irei no kiken do hirui naki kakki juuman
+Na-na, na-na-na
+Ready for my show
+Ichika bachika aa
+
+[Chorus]
+Na-na, na-na-na
+Ready for my show
+Banzai asobuge ni kotobuki
+Shout it out, shout it out
+Na-na, na-na-na
+Ready for my show
+Kassai makiokosu tame ni stay
+Issai gassai wasurete shout it out
+
+[Post-Chorus]
+Ay, woah-oh-oh-oh
+Migi ni hidari matomete rat-a-tat-a-tat (Pull up)
+Omoikkiri ikki ni (Clap, clap, clap)
+Nani wa tomoare goshou wa are
+Shout it out, shout it out
+        </pre>    
+        <video src="../../videos/Show.mp4" width="320" height="240" controls></video>
+        <button id="switlyr">Show Lyrics</button><button id="killlyr">Hide Lyrics</button>
+        </div>
+        <!-- <div id="comms"><button onclick="hideComm" id="HideCom">Hide Comentary</button></div> -->
+        <h3>Other Songs:</h3>
+<!-- SUGGESTIONS_START -->			
+    <div id="othervids">
+        <div class="specialBorder"><a href="../../pages/show/show.html"><div class="vidsug">
+           <img src="../../Images/show.jpg" alt="thumbnail">
+           <h3>Show</h3>
+           <span>A Truly Magnificent Perfomance</span>
+        </div></a></div>
+        <div class="specialBorder"><a href="../../pages/404.html"><div class="vidsug">  <!-- pages/usseewa/usseewa.html -->
+            <img src="../../Images/AdoLogo.jpg" alt="thumbnail">
+            <h3>Usseewa</h3>
+            <span>Where the growl was heard at full volume</span>
+        </div></a></div>
+        <div class="specialBorder"><a href="../../pages/404.html"><div class="vidsug">  <!-- pages/readymade/readymade.html -->
+            <img src="../../Images/AdoLogo.jpg" alt="thumbnail">
+            <h3>Readymade</h3>
+            <span>Are you actually following Your dream?</span>
+        </div></a></div>
+    </div>
+<!-- SUGGESTIONS_END -->
+    </div>
+    <footer>    
+        <img src="../../Images/speakerLogo1.png" alt="CoolMegaphoneLogoaswell">
+    <div>
+        <address style="display: flex; align-self: flex-end; justify-self: right; flex-flow: column; color: rgb(254, 97, 19)">
+        Contact us:
+        <a href="mailto:rimskykoldun@gmail.com">Our Email</a> 
+        </address>
+        <span id="copyR">&copy;Adoraburu, 2023</span>
+    </div>
+    <span id="sneaky">Made by Alex S., or Aitemu</span><span id="bneaky">Hope you're having a great day.</span>
+    </footer>
+    <!-- contacts original author links about us  -->
+    
+    <!-- <p>
+        <a href="http://jigsaw.w3.org/css-validator/check/referer">
+            <img style="border:0;width:88px;height:31px"
+                src="http://jigsaw.w3.org/css-validator/images/vcss"
+                alt="Правильный CSS!" />
+        </a>
+    </p>
+    <p>
+        <a href="http://jigsaw.w3.org/css-validator/check/referer">
+            <img style="border:0;width:88px;height:31px"
+                src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+                alt="Правильный CSS!" />
+            </a>
+        </p> -->
+</body>
+</html>

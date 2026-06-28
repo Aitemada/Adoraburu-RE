@@ -1,0 +1,13 @@
+server:
+  persistentVolume:
+    size: 1Gi
+  retention: 2h # Keep only 2 hours of metrics
+  resources:
+    limits:
+      memory: 512Mi
+    requests:
+      memory: 256Mi
+alertmanager:
+  enabled: false
+pushgateway:
+  enabled: false

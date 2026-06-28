@@ -1,0 +1,29 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: nginx-config
+data:
+  default.conf: |
+    server {
+        listen 80;
+        server_name localhost;
+
+        location / {
+            root /var/www/AdoRaburu-Re;
+            index index.html;
+        }
+
+        #routin' API dials to bckend
+        location /api/ {
+            proxy_pass http://adorapi-svc:3000/api/;
+            proxy_set_header Host $host;
+            proxy_set_header X-Real-IP $remote_addr;
+            
+            #to be able to upload videos and images up to 4000Mb. Just in case, ofc it's overkill
+            client_max_body_size 4G; 
+        }
+
+        location /metrics {
+            proxy_pass http://adorapi-svc:3000/metrics;
+        }
+    }
