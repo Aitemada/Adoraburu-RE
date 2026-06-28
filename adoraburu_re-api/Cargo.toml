@@ -1,0 +1,15 @@
+[package]
+name = "adoraburu_re-api"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+axum = { version = "0.7", features = ["multipart", "macros"] }
+tokio = { version = "1", features = ["full"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+regex = "1.10"
+metrics = "0.22"
+metrics-exporter-prometheus = "0.13"
+rand = "0.8"
+fs_extra = "1.3"
