@@ -37,25 +37,42 @@ The frontend will be accessible via adoraburu.utae/ url in your browser. All the
 
 ## Quick Start
 To add a completely new song to the platform via the API, follow this sequence:
+
 Create the page: POST /api/add-song/{songname}
+
 Upload assets: POST /api/upload/video/{songname} & POST /api/upload/image/{songname}/bg
+
 Push lyrics: POST /api/lyrics/{songname}
+
 Update Suggestions: POST /api/update-suggestions/all to interlink the new page across the site.
 
 ## Endpoints Reference
 `/api/songs`(GET) - Retrieves the entire JSON metadata map of all currently registered songs.
+
 `/api/songs`(PUT) - Overwrites the entire JSON metadata map with a provided JSON payload.
+
 `/api/add-song/:name`(POST) - Duplicates the template folder, renames files, injects the song name into the HTML, and registers the new song.
+
 `/api/random-song`(GET) - Returns a randomly selected song name from the active metadata pool.
+
 `/api/update-songlist`(POST) - Rebuilds the central songlist.html page's unordered list based on the currently registered songs.
+
 `/api/update-suggestions/all`(POST) - Calculates 3 random distinct song suggestions for every existing song page and injects them into their HTML.
+
 `/api/update-suggestions/:songname`(POST) - Calculates 3 random distinct song suggestions and injects them into the HTML of a specific song.
+
 `/api/lyrics/:songname`(POST) - Updates the song's lyrics in the JSON metadata and immediately overwrites the `<pre id="lyrics">` block in its HTML.
+
 `/api/css/:songname`(GET) - Retrieves the raw CSS text from a specific song's stylesheet.
+
 `/api/css/:songname`(POST) - Overwrites the specified song's CSS stylesheet with the provided raw CSS payload.
+
 `/api/upload/video/:songname`(POST) - Uploads an MP4 file to the /videos/ folder. Use the query ?force=true to overwrite an existing video.
+
 `/api/upload/image/:songname/:img_type`(POST) - Uploads an image as either bg (Background) or thumbic (Thumbnail). Use the query ?force=true to overwrite an existing image.
+
 `/metrics`(GET) - Exposes application metrics (like songs_added_total) for Prometheus scraping.
+
 `/api/health`(GET) - Returns a simple "OK" to verify the API is alive and responsive.
 
 ## Legal & Copyright Notice
