@@ -3,7 +3,7 @@
 An old static website revamped and reborn with a help of REST API built on Rust!
 
 ## Overview & Features
-The core of the project is a web site on a pure HTML/CSS/JS stack. The API allows to add, modify and easily manage/modify the pages on the site
+The core of the project is a web site on a pure HTML/CSS/JS stack. The API allows you to add, modify and easily manage/modify the pages on the site
 The pages feature song's lyrics, video, and three suggestion boxes at the bottom of the page, which are generated automatically when you create new pages and feature actual, working links to existing song pages. The pages are thematically adjustable via CSS manipulations. All of this can be modified through API calls!
 
 ## Tech Stack & Environment
@@ -17,7 +17,7 @@ There are three main folders in the project:
 * adoraburu_re-api - API project files. Use this folder to build the Docker image.
 * adora-k8s-files - All the Kubernetes deployments.
 
-**The API shall operate in the strictly stated Adoraburu_RE/ folder you need to copy onto your machine. State the folder's name within the Install-Adorabu.sh.sh script instead of {SITE-FOLDERPTH} placeholder!** 
+**The API shall operate in the strictly stated Adoraburu_RE/ folder you need to copy onto your machine. State the folder's name within the Install-Adorabu.sh script instead of {SITE-FOLDERPTH} placeholder!** 
 
 The site's structure is the following: main directory contains the landing page files, and /pages directory contains all the other pages' files. /Images and /videos directories contain the respective images and videos used on the pages. All the new pages' directories by default are created as 'songname/', and their resources are bound to '../Images/{songname.jpg}' and '../videos/{songname.mp4}' files. Yet, if you need to update the contents, you simply upload it through an API-call, which would upload the files the right way, reducing manual labor to minimum! 
 
@@ -27,7 +27,7 @@ API utilizes a exstg-songs.json file created locally to manage existing songname
 Copy all the directories into any location on your system you see fit. Remember this path, and replace all the *"{SITE-FOLDERPTH}"* markers with it. 
 *Example: you copied the directories to /home/myusr/Projects/sitefiles/. Your {SITE-FOLDERPTH} = /home/myusr/Projects/sitefiles!*
 
-In case to start the site, you need to boot the minikube cluster first:
+In order to start the site, you need to boot the minikube cluster first:
 ```bash
 minikube start --driver=docker
 ```
