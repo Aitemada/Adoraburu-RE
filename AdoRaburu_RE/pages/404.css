@@ -104,23 +104,10 @@ pre{
     align-self: center;
 }
 
-/* #comms{
-    
-}
-
-#HideCom{
-
-}
- */
-
-
 img, button:hover{
     cursor: url(../Images/RoseCur.png), crosshair; 
 }
 
-/* html :not(button){
-    
-} */
 
 body{
     transition-duration: 250ms;
@@ -136,20 +123,13 @@ body{
 
 #siteStruct{
     display: grid;
-    /* border:  5px solid #3A5A92; */
     margin: 0%;
     padding: 0%;
 }
 
 #mainNavig{
-    /* border:  5px solid #f58d05; */
     display: grid;
 }
-
-/* #nav{
-    display: grid;
-    border:  5px solid #055df5;
-} */
 
 nav{
     border:  5px solid #001436;
@@ -204,7 +184,6 @@ header{
     display: grid;
     grid-template-columns: 10% 90%;
     background-image: url(../Images/rosesbckgrnd.png);
-    /* border:  5px solid #d2d2d2; */
 }
 
 h1{
@@ -255,7 +234,6 @@ h2{
     margin: 0%;
     display: grid;
     grid-template-rows: 50% 50%;
-   /* background: linear-gradient(-135deg, #353535, #1a095a, rgb(24, 55, 109) 20% 30%, #1a095a, #1e037f, #131216 , #210097 85%); */
 }
 
 #containHeads > *{
@@ -269,14 +247,12 @@ display: flex;
 #othervids{
    display: flex;
    justify-content: space-around;
-   /* border: #171717 solid 2px; */
 }
   .vidsug{
     transition-property: all;
     transition-duration: 250ms;
     justify-content: center;
     display: flex;
-    /* border: #210097 solid 3px; */
     flex-flow: column wrap;
   }
 
@@ -312,8 +288,6 @@ display: flex;
     font-style: italic;
     font-variant: small-caps;
     background-image: none;
-    /* background-color: #1e037f; */
-    /* border: #372282 2px solid; */
     background-color: rgba(106, 76, 216, 0.584);
     text-shadow: 4px 0px 3px rgb(0 0 0), 1px 1px 0px rgb(0 0 0), -1px 1px 0px rgb(0 0 0);
     color: white;
@@ -332,7 +306,6 @@ display: flex;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color:white;
     text-shadow: rgb(30, 25, 177) 2px -3px 2px;
-    /* border: #372282 2px solid; */
     background-color: rgba(106, 76, 216, 0.584);
 }
 video{
@@ -469,7 +442,7 @@ footer{
       background-position-x: -250px;
     }
 }
-@media screen and (max-width: 280px){ /*nothing narrower galaxy fold huh...*/
+@media screen and (max-width: 280px){ 
     html{
         margin-bottom: 3%;
         margin: 0%;
@@ -480,7 +453,7 @@ footer{
     }
     body{background-size: auto;}
 }
-@media screen and (max-width: 335px){ /*nothing narrower galaxy fold huh...*/
+@media screen and (max-width: 335px){ 
     html{
         margin: 0%;
         display: flex;
@@ -488,7 +461,6 @@ footer{
         justify-content: center;
         min-width: 280px;
     }
-    /* body{background-size: cover;} */
 }
 
   @media screen and (max-width: 390px) {

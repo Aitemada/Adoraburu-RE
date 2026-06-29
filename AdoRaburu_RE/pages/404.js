@@ -6,16 +6,10 @@ let randSong = (a) =>{
 
 let rand = getRandomInt(3)
 
-//  alert(`${rand} hey`)
-
-// const songlist = {0:'usseewa',1:"readymade", 2:"show" };
-
-// alert(`${songlist[rand]} `)
-
 if(rand == 0){
-    location.href = "404.html" //pages/usseewa/usseewa.html
+    location.href = "404.html" 
 }else if(rand == 1){
-    location.href = "404.html" //pages/readymade/readymade.html
+    location.href = "404.html" 
 }else if(rand == 2){
     location.href = "../pages/show/show.html"
 }
@@ -28,4 +22,3 @@ let AdoYT = () => window.open("https://www.youtube.com/channel/UCln9P4Qm3-EAY4ai
 let sngList = () => location.href = "Songlist/songlist.html"
 let donate = () => location.href = "404.html"
 
-//https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random

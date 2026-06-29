@@ -6,11 +6,6 @@ let randSong = (a) =>{
 
 let rand = getRandomInt(3)
 
-//  alert(`${rand} hey`)
-
-// const songlist = {0:'usseewa',1:"readymade", 2:"show" };
-
-// alert(`${songlist[rand]} `)
 
 if(rand == 0){
     location.href = "../../pages/404.html" //pages/usseewa/usseewa.html

@@ -6,12 +6,6 @@ let randSong = (a) =>{
 
 let rand = getRandomInt(3)
 
-//  alert(`${rand} hey`)
-
-// const songlist = {0:'usseewa',1:"readymade", 2:"show" };
-
-// alert(`${songlist[rand]} `)
-
 if(rand == 0){
     location.href = 'pages/usseewa/usseewa.html'
 }else if(rand == 1){
@@ -22,7 +16,7 @@ if(rand == 0){
 return 777
 }
 
-let hideButVal = 1 //is shown
+let hideButVal = 1 
 let hideComm = () =>{
 if(hideButVal == 0){
 hideButVal = 1
@@ -45,16 +39,12 @@ let showLyr = () =>{
     switcher.style.display = "none"
     killer.style.display = 'flex'
     lyrsS.style.display = 'flex'
-    // if(screen.width >= 1080){
     lyrsS.style.flexFlow = "wrap";
     lyrsS.style.position = "absolute";
     lyrsS.style.height = "100%";
     lyrsS.style.top = "0";
-    //     lyrsS.style.alignSelf = "flex end";
     lyrsS.style.width = "-webkit-fill-available"
     vide.style.position = 'absolute'
-    //     killer.style.position = "absolute"
-    // }else{vide.style.display = 'none'}
 }
 
 let kiLyr = () =>{
@@ -62,10 +52,8 @@ let kiLyr = () =>{
     let killer = document.getElementById('killlyr')
     let lyrsS = document.getElementById('lyrics')
     let vide = document.getElementsByTagName('video')[0]
-    // lyrsS.style.flexFlow = "column wrap";
     vide.style.display = 'flex'
     vide.style.position = 'static'
-    // killer.style.position = "static"
     switcher.style.display = "flex"
     killer.style.display = 'none'
     lyrsS.style.display = 'none'
@@ -80,5 +68,3 @@ let reHome = () => location.href = "index.html";
 let AdoYT = () => window.open("https://www.youtube.com/channel/UCln9P4Qm3-EAY4aiEPmRwEA", "_blank", "noreferrer", "noopener");
 let sngList = () => location.href = "pages/Songlist/songlist.html"
 let donate = () => location.href = "pages/404.html"
-
-//https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
